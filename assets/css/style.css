@@ -1,0 +1,122 @@
+:root {
+  --primary-color: #181c14;
+  --secondary-color: #3c3d37;
+  --tertiary-color: #697565;
+  --quartiary-color: #ecdfcc;
+  --white-color: #fff;
+  --gap: 3rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-size: 2rem;
+}
+.main-bg {
+  background-image: url("../img/main-bg.svg");
+  background-size: cover;
+  background-position: center center;
+  color: var(--primary-color);
+}
+.second-bg {
+  background-image: url("../img/second-bg.svg");
+  background-size: auto;
+  background-position: center center;
+  color: var(--secondary-color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-size: 6rem;
+  text-transform: uppercase;
+}
+h2 {
+  font-size: 5.5rem;
+}
+h3 {
+  font-size: 5rem;
+}
+h4 {
+  font-size: 4.5rem;
+}
+h5 {
+  font-size: 4rem;
+}
+h6 {
+  font-size: 3.5rem;
+}
+
+.main-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--gap);
+}
+
+.menu .main-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section {
+  min-height: 100vh;
+}
+
+.menu {
+  background-color: var(--quartiary-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  border-bottom: 3px solid var(--tertiary-color);
+}
+
+.menu h1 {
+  font-size: 2.3rem;
+  text-decoration: none;
+  padding: 1rem;
+  align-items: center;
+}
+.menu h1 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.menu ul li a {
+  display: block;
+  align-items: center;
+  padding: 1rem;
+  font-size: 1.8rem;
+  font-family: "Montserrat", sans-serif;
+  color: var(--primary-color);
+}
+.menu ul li a:hover {
+  color: #697565;
+}
+
+.menu ul {
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
