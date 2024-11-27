@@ -9,6 +9,7 @@ html {
 body {
   font-family: "Open Sans", sans-serif;
   font-size: 2rem;
+  line-height: 1.5;
 }
 
 h1,
@@ -39,9 +40,12 @@ h5 {
 h6 {
   font-size: 3.5rem;
 }
+
 a {
   text-decoration: none;
 }
+
+/* variables */
 :root {
   --primary-color: #181c14;
   --secondary-color: #3c3d37;
@@ -51,6 +55,7 @@ a {
   --gap: 1rem;
 }
 
+/* backgrounds */
 .main-bg {
   background-image: url("../img/main-bg.svg");
   background-size: cover;
@@ -58,25 +63,23 @@ a {
   color: var(--primary-color);
 }
 .second-bg {
-  background-image: url("../img/second-bg.svg");
+  /* background-image: url("../img/second-bg.svg");
   background-size: auto;
-  background-position: center center;
-  color: var(--secondary-color);
+  background-position: center center; */
+  background-color: var(--quartiary-color);
 }
 
+/* main */
 .main-content {
   max-width: 120rem;
   margin: 0 auto;
   padding: var(--gap);
 }
 
+/* menu */
 .menu .main-content {
   display: flex;
   justify-content: space-between;
-}
-
-.section {
-  min-height: 100vh;
 }
 
 .menu {
@@ -86,6 +89,7 @@ a {
   left: 0;
   right: 0;
   width: 100%;
+  z-index: 1;
   border-bottom: 0.5rem solid var(--quartiary-color);
 }
 
@@ -95,6 +99,7 @@ a {
   padding: 1rem;
   align-items: center;
 }
+
 .menu h1 a {
   color: inherit;
   text-decoration: none;
@@ -109,8 +114,9 @@ a {
   color: var(--primary-color);
   position: relative;
 }
+
 .menu ul li a:hover {
-  color: #697565;
+  color: var(--secondary-color);
 }
 
 .menu ul li a::after {
@@ -120,7 +126,7 @@ a {
   left: 50%;
   width: 0%;
   height: 0.3rem;
-  background: var(--tertiary-color);
+  background: var(--quartiary-color);
   transition: all 300ms ease-in-out;
 }
 
@@ -128,7 +134,6 @@ a {
   width: 50%;
   left: 25%;
 }
-
 
 .menu ul {
   display: flex;
@@ -138,4 +143,46 @@ a {
   align-items: center;
 }
 
+.menu-spacing {
+  height: 7.1rem;
+}
+/* sections */
+.section {
+  min-height: 100vh;
+}
 
+/* first section */
+.intro-content {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap);
+  height: 100vh;
+  column-gap: 3rem;
+  /* justify-content: center;
+  align-items: center; */
+}
+.intro-text-content p{
+  text-indent: 4rem;
+}
+
+.intro-img img, 
+.intro-img svg {
+  max-width: 100%;
+  height: auto;
+}
+
+.intro-text-content, .intro-img{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 2rem; */
+}
+
+.intro-text-content h2 {
+  line-height: 1.2;
+  font-size: 5rem;
+  margin-bottom: 5rem;
+  /* text-transform: uppercase; */
+}
